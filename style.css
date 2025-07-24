@@ -499,48 +499,54 @@ footer {
     justify-content: center;
   }
 }
-/* Tablet and mobile-friendly layout */
+/* For mobile responsiveness */
 @media (max-width: 768px) {
-  section.resume,
-  section.skills,
-  section.projects {
+  #skills .section__container,
+  #portfolio .section__container,
+  .resume-section {
     width: 95%;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    grid-template-columns: 1fr !important;
+    text-align: center;
   }
 
-  .skills li, .projects .card {
-    width: 100%; /* stack items */
-    margin-bottom: 16px;
+  .skills__grid {
+    grid-template-columns: 1fr;
   }
 
-  img.profile, .project-image {
+  .skill__category {
+    padding: 16px;
+  }
+
+  #portfolio li {
+    max-height: none; /* Allow full height */
+    padding: 15px;
+  }
+
+  .resume-section iframe,
+  .embedded-resume {
     width: 100%;
     height: auto;
   }
 }
+.resume-section {
+  padding: 60px 20px;
+  background-color: var(--extra-light);
+  text-align: center;
+}
 
-/* Smartphones */
-@media (max-width: 480px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.resume-section iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
-  nav a {
-    padding: 10px;
-    font-size: 18px;
-  }
-
-  iframe, .embedded-resume {
-    width: 100%;
+@media (max-width: 768px) {
+  .resume-section iframe {
     height: 300px;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
   }
 }
