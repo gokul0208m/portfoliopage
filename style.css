@@ -273,7 +273,44 @@ ul li a:hover {
   scrollbar-color: var(--primary-color) transparent;
 }
 
-/* WebKit Scrollbar (Chrome/Safari) */
+/* Portfolio Section Fix */
+#portfolio .section__container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#portfolio .description {
+  margin-bottom: 30px;
+  color: var(--text-light);
+}
+
+/* Project List Container */
+#portfolio ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Each Project Item */
+#portfolio li {
+  background-color: #fff;
+  border-left: 5px solid var(--primary-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+
+  /* SCROLL for long text */
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+/* Scrollbar Styling (Chrome/Safari) */
 #portfolio li::-webkit-scrollbar {
   width: 6px;
 }
@@ -282,28 +319,20 @@ ul li a:hover {
   border-radius: 4px;
 }
 
-#portfolio li strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #222;
-  font-size: 1.1rem;
-  text-align: left;
-}
-
-#portfolio li:hover {
-  border-left-color: var(--primary-color-dark);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-/* Mobile Friendly */
+/* Responsive: Ensure full width on mobile */
 @media (max-width: 768px) {
   #portfolio .section__container {
     padding: 40px 10px;
   }
 
+  #portfolio ul {
+    width: 100%;
+  }
+
   #portfolio li {
     font-size: 0.95rem;
     max-height: 250px;
+    padding: 15px;
   }
 }
 
