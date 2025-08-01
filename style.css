@@ -235,57 +235,75 @@ ul li a:hover {
   }
 }
 
-
-#portfolio ul {
-  list-style-type: none;
-  padding-left: 0;
+/* Portfolio Section */
+#portfolio .section__container {
+  padding: 60px 20px;
   text-align: center;
-  max-width: 700px;      /* limit max width */
+}
+
+#portfolio .description {
+  margin-bottom: 30px;
+  color: var(--text-light);
+}
+
+/* Project List */
+#portfolio ul {
+  list-style: none;
+  padding: 0;
   margin: 0 auto;
+  max-width: 800px;
 }
 
+/* Each project card */
 #portfolio li {
-  background-color: #ffffff;
-  border-left: 6px solid #00dffc;
-  padding: 20px 25px;
+  background-color: #fff;
+  border-left: 5px solid var(--primary-color);
+  padding: 20px;
   margin-bottom: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-size: 1rem;
-  line-height: 1.5;
-  color: #333333;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  cursor: default;
+  line-height: 1.6;
+  color: #333;
 
-  /* Optional: fix height and enable scroll if content too long */
-  max-height: 180px;    /* set max height */
-  overflow-y: auto;     /* scroll if content overflows */
+  /* Scroll config */
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
 }
 
-/* Hide scrollbar but allow scrolling */
+/* WebKit Scrollbar (Chrome/Safari) */
 #portfolio li::-webkit-scrollbar {
   width: 6px;
 }
-
 #portfolio li::-webkit-scrollbar-thumb {
-  background-color: #00dffc;
-  border-radius: 3px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+#portfolio li strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
 #portfolio li:hover {
-  box-shadow: 0 8px 20px rgba(0, 223, 252, 0.3);
-  border-left-color: #007bbd;
+  border-left-color: var(--primary-color-dark);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* Responsive */
+/* Mobile Friendly */
 @media (max-width: 768px) {
-  #portfolio ul {
-    max-width: 100%;
-    padding: 0 10px;
+  #portfolio .section__container {
+    padding: 40px 10px;
   }
-  
+
   #portfolio li {
-    max-height: none; /* remove fixed height on small screens */
+    font-size: 0.95rem;
+    max-height: 250px;
   }
 }
 
